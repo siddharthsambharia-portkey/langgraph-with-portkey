@@ -16,7 +16,7 @@ The simple chatbot:
 
 1. Takes a user **message** as input
 2. Maintains a history of the conversation
-3. Generates a response based on the current message and conversation history
+3. Generates a response based on the current message and conversation history and tool output
 4. Updates the conversation history with the new interaction
 
 This template provides a foundation that can be easily customized and extended to create more complex conversational agents.
@@ -44,18 +44,6 @@ TAVILY_API_KEY=..
 
 3. Customize the code as needed.
 4. Open the folder in LangGraph Studio!
-
-## How to customize
-
-1. **Modify the system prompt**: The default system prompt is defined in [configuration.py](./src/agent/configuration.py). You can easily update this via configuration in the studio to change the chatbot's personality or behavior.
-2. **Select a different model**: We default to Anthropic's Claude 3 Sonnet. You can select a compatible chat model using `provider/model-name` via configuration. Example: `openai/gpt-4-turbo-preview`.
-3. **Extend the graph**: The core logic of the chatbot is defined in [graph.py](./src/agent/graph.py). You can modify this file to add new nodes, edges, or change the flow of the conversation.
-
-You can also quickly extend this template by:
-
-- Adding custom tools or functions to enhance the chatbot's capabilities.
-- Implementing additional logic for handling specific types of user queries or tasks.
-- Integrating external APIs or databases to provide more dynamic responses.
 
 ## Development
 
